@@ -1,4 +1,8 @@
-# angular-demo
+# Angular demos
+
+```shell
+npm install
+```
 
 ## Service Objects
 1. We had an issue.
