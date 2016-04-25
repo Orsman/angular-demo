@@ -1,1 +1,6 @@
-# angular-demo
+### Angular demos
+
+
+```shell
+npm install
+```
