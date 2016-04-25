@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular - Separation of Concern</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main>
+		<section ng-controller="firstCtrl as first">
+			<h1>First controller:</h1>
+			<div><label>Name:</label> <input type="text" ng-model="first.user.name" /></div>
+			<div><label>Age:</label> <input type="text" ng-model="first.user.age" /></div>
+			<div><label>Strength:</label> <input type="text" ng-model="first.user.strength" /></div>
+
+			<div class="button-holder">
+				<button type="button" ng-click="first.getData(1)">Get User 1</button>
+				<button type="button" ng-click="first.getData(2)">Get User 2</button>
+			</div>
+		</section>
+
+		<section ng-controller="secondCtrl as second">
+			<h1>Second controller:</h1>
+			<div><label>Name:</label> <input type="text" ng-model="second.data.name" /></div>
+			<div><label>Age:</label> <input type="text" ng-model="second.data.age" /></div>
+			<div><label>Strength:</label> <input type="text" ng-model="second.data.strength" /></div>
+
+			<div class="button-holder">
+				<button type="button" ng-click="second.getData(1)">Get User 1</button>
+				<button type="button" ng-click="second.getData(2)">Get User 2</button>
+				<button type="button" ng-click="second.breakConnection()">Break connection!</button>
+			</div>
+		</section>
+	</main>
+
+	<script src="../node_modules/angular/angular.js"></script>
+	<script src="app.js"></script>
+	<script src="first.controller.js"></script>
+	<script src="second.controller.js"></script>
+	<script src="data-handler.factory.js"></script>
+</body>
+</html>

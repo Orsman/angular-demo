@@ -1,0 +1,116 @@
+html,body {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  margin: 0;
+  position: relative;
+}
+
+main {
+	position: relative;
+	height: 100%;
+  display: flex;
+}
+
+main section {
+  flex: 1;
+  font-size: 2em;
+  line-height: 1.5em;
+  font-weight: 600;
+  color: #fff;
+  padding: 100px;
+}
+
+label {
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+	font-size: .75em;
+	opacity: .8;
+	padding-right: 30px;
+}
+
+input[type="text"] {
+	border: none;
+	background-color: transparent;
+	color: #fff;
+	outline: none;
+	font-size: 1em;
+	font-weight: 600;
+}
+
+.button-holder {
+	margin-top: 100px;
+}
+
+button {
+	position: relative;
+	display: inline-block;
+	margin-right: 20px;
+	padding: 10px 20px;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 600;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: #fff;
+	border-radius: 3px;
+}
+
+button:active {
+	top: 4px;
+}
+
+button:last-child {
+	margin-right: 0;
+}
+
+/* Color specials
+======================================== */
+
+section:nth-child(odd) {
+  background-color: #7A7786;
+}
+
+section:nth-child(odd) button {
+	color: #fff;
+	background-color: #54525c;
+	box-shadow: 0 4px #403e45;
+}
+
+section:nth-child(odd) button:hover {
+	background-color: #66646F;
+}
+
+section:nth-child(odd) button:active {
+	box-shadow: 0 0 #403e45;
+}
+
+
+section:nth-child(even) {
+  background-color: #fff;
+  color: #7A7786;
+}
+
+section:nth-child(even) input[type="text"] {
+	color: #7A7786;
+}
+
+section:nth-child(even) button {
+	color: #fff;
+	background-color: #7A7786;
+	box-shadow: 0 4px #54525c;
+}
+
+section:nth-child(even) button:hover {
+	background-color: #66646F;
+}
+
+section:nth-child(even) button:active {
+	box-shadow: 0 0 #403e45;
+}
