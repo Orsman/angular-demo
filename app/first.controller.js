@@ -5,17 +5,12 @@ angular
 function firstCtrl(DataHandlerFactory) {
 	var vm = this;
 
+	// Bind scope object to object in factory
 	vm.user = DataHandlerFactory.user;
-	vm.getData = getUser;
+
+	// Bind method from factory to the scope
+	vm.getUser = DataHandlerFactory.getUser;
 
 	// Init function
-	DataHandlerFactory.getUser(1);
-
-	// Methods
-	function getUser(id) {
-		DataHandlerFactory.getUser(id)
-			.then(function(response) {
-				// console.log('return response in ctrl: ', response);
-			});
-	}
+	vm.getUser(1);
 }

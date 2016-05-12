@@ -5,20 +5,14 @@ angular
 function secondCtrl(DataHandlerFactory) {
 	var vm = this;
 
+	// Bind scope object to object in factory
 	vm.data = DataHandlerFactory.user;
-	vm.getData = getUser;
+
+	// Bind method from factory to the scope
+	vm.getUser = DataHandlerFactory.getUser;
+
+	// Private method
 	vm.breakConnection = breakConnection;
-
-	// Init function
-	DataHandlerFactory.getUser(1);
-
-	// Methods
-	function getUser(id) {
-		DataHandlerFactory.getUser(id)
-			.then(function(response) {
-				// console.log('return response in ctrl: ', response);
-			});
-	}
 
 	function breakConnection() {
 		vm.data = {};
